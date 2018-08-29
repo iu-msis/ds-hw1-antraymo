@@ -14,7 +14,7 @@ nav{
   width: 250px;
 }
 
-head{
+.head{
   background-color: #F1C40F;
   color: #F1C40F;
 }
@@ -28,4 +28,9 @@ p{
 
 .albums{
   width: 250px;
+}
+
+.pictures{
+  width: 250px;
+  padding: 20px;
 }
