@@ -10,3 +10,12 @@ nav{
     border-width: 1px;
     padding-left: 25px;
 }
+
+#pic{
+  width: 250px;
+}
+
+head{
+  background-color: #F1C40F;
+  color: #F1C40F;
+}
