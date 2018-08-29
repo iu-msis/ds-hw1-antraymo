@@ -1,0 +1,12 @@
+.me{
+  width: 250px;
+  border-radius: 50%;
+}
+
+nav{
+    color: darkolivegreen;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 25px;
+}
