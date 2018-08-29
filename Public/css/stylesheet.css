@@ -4,7 +4,6 @@
 }
 
 nav{
-    color: darkolivegreen;
     border-color: black;
     border-style: solid;
     border-width: 1px;
@@ -18,4 +17,15 @@ nav{
 head{
   background-color: #F1C40F;
   color: #F1C40F;
+}
+
+p{
+  font-size: 16pt;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.albums{
+  width: 250px;
 }
