@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head class="head">
-    <link rel="stylesheet" href=C:\Users\ajray\Documents\GitHub\ds-hw1-ajraymond27\Public\css\stylesheet.css>
+    <link rel="stylesheet" href="C:\Users\ajray\Documents\GitHub\ds-hw1-ajraymond27\Public\css\stylesheet.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -31,19 +31,32 @@
               </ul>
      </nav>
   <body>
-    <h3 class="page_title">About Me</h3>
-    <img id="pic" src= "C:\Users\ajray\Documents\GitHub\ds-hw1-ajraymond27\Public\img\DSC_0496.jpg" alt="aj_pic">
-    <p>
-      Name:         AJ Raymond <br />
-      Origin        Country: United States<br />
-      Birthdate:    January 1, 2000<br />
-      Age:          18<br />
-      Email:        antraymo@iu.edu
-    </p>
-    <p>
-      This site is intended to display my favorite albums and some of my photography. Enjoy!
-    </p>
-    
+    <div class="container" id="aboutMe">
+      <h3 class="page_title">About Me</h3>
+      <img id="pic" src= "C:\Users\ajray\Documents\GitHub\ds-hw1-ajraymond27\Public\img\DSC_0496.jpg" alt="aj_pic">
+      <table class="table">
+        <tr v-for="result in users">
+          <td>Name:</td>
+        </tr>
+        <tr >
+          <td>Origin:</td>
+        </tr>
+        <tr>
+          <td>Birthdate:</td>
+        </tr>
+        <tr>
+          <td>Age:</td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+        </tr>
+      </table>
+      <p>
+        This site is intended to display my favorite albums and some of my photography. Enjoy!
+      </p>
+    </div>
+
+
   </body>
 
   <footer>
