@@ -1,12 +1,12 @@
 var randomApp = new Vue({
-  el: '#randomMain',
+  el: '#aj',
   data: {
     users: []
   },
 
   computed: {
-    age: function () {
-      return moment().diff(moment(date), 'years')
+    age: function (d) {
+      return moment(d).diff(moment(date), 'years')
     }
   },
 
@@ -19,15 +19,13 @@ var randomApp = new Vue({
       fetch('https://randomuser.me/api/')
       .then(response => response.json())
       .then(json => {
-        this.users = json.results;
-      }),
-      .catch((err) => {
-        console.log("fetch error");
-        console.log(err);
-      });
+        this.users = json.results[0];
+      })
+
     }
   },
   created () {
     this.fetch_users();
+
   }
 })
