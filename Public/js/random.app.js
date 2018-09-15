@@ -3,7 +3,18 @@ var randomApp = new Vue({
   data: {
     users: []
   },
+
+  computed: {
+    age: function () {
+      return moment().diff(moment(date), 'years')
+    }
+  },
+
   methods: {
+    pretty_date: function (d) {
+      return moment(d).format('l')
+    },
+
     fetch_users() {
       fetch('https://randomuser.me/api/')
       .then(response => response.json())
