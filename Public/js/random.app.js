@@ -1,5 +1,5 @@
 var randomApp = new Vue({
-  el: '#randomMain'
+  el: '#randomMain',
   data: {
     users: []
   },
