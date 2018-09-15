@@ -20,14 +20,14 @@ var randomApp = new Vue({
       .then(response => response.json())
       .then(json => {
         this.users = json.results;
-      })
+      }),
       .catch((err) => {
         console.log("fetch error");
-        console.log('***', err);
+        console.log(err);
       });
     }
-  }
-  created: function(){
-    this.fetch_users()
+  },
+  created () {
+    this.fetch_users();
   }
 })
