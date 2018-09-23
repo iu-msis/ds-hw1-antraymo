@@ -40,7 +40,7 @@
   State: {{users.location.city}}<br />
   Birthdate: {{pretty_date(users.dob.date)}}<br />
   Age: {{users.dob.age}}<br />
-  Email:<a :href="'mailto:'+users.email">{{users.email}}</a>
+  Email:<a :href="'mailto:'+users.email">{{users.email}}</a><br />
     <button class="btn btn-warning" @click="fetch_users();">Refresh</button>
 </div>
           <p>
