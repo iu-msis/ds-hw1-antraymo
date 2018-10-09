@@ -29,14 +29,14 @@ class Comment
     array_push($arr, $theComment);
   }
   return $arr;
+
 }
-}
-public function create() {
+public function create(){
    $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
    $sql = 'INSERT INTO hw1 (id, comment)
            VALUES (?,?)';
-           
+
    $statement = $db->prepare($sql);
    $success = $statement->execute([
      $this->id,
