@@ -5,7 +5,7 @@ set_include_path (__DIR__);
 
 // Change the working directory to this file.
 if ($_SERVER['REQUEST_METHOD'] == 'POST'
-&& stripos($_SERVER['CONTENT_TYPE'], 'application/json') !==false) {
+&& stripos($_SERVER['CONTENT_TYPE'], 'application/json') !== false) {
   $_POST = json_decode(file_get_contents('php://input'), true);
 }
 
