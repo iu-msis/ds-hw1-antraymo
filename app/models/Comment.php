@@ -26,7 +26,7 @@ class Comment
   $arr = [];
   while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
     $comment =  new Comment($row);
-    array_push($arr, $theComment);
+    array_push($arr, $comment);
   }
   return $arr;
 
