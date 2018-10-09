@@ -35,11 +35,12 @@ public function create(){
    $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
    $sql = 'INSERT INTO hw1 (id, comment)
-           VALUES (?)';
+           VALUES (?,?)';
 
    $statement = $db->prepare($sql);
    $success = $statement->execute([
-     $this->comment,
+     $this->id,
+     $this->comment
    ]);
 
    $this->id = $db->lastInsertId();
