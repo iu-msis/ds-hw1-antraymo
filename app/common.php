@@ -1,7 +1,7 @@
 <?php
 
-chdir(_DIR_);
-set_include_path (_DIR_);
+chdir(__DIR__);
+set_include_path (__DIR__);
 
 // Change the working directory to this file.
 if ($_SERVER['REQUEST_METHOD'] == 'POST'
