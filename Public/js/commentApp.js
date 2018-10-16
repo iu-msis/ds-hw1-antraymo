@@ -41,7 +41,7 @@ var commentApp = new Vue({
         comment: null
       };
     },
-
+},
   created () {
 
     this.commentForm = this.getEmptyCommentForm();
