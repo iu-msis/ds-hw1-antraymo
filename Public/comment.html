@@ -25,32 +25,34 @@
 
   <body>
       <h3 class="page_title">Comment Page</h3>
-      <div id ="comment" class="container">
-        <table id="commentTable" class="table table-striped">
+      <div id ="commentTable" class="container">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th scope="col">ID</th>
               <th scope="col">Comment</th>
             </tr>
           </thead>
-          <tbody>
-            <tr v-for="result in comments">
+          <tbody id="CommentTableBody" v-for="result in comments"
+            :id="result.id"
+            :comment="result.comment">
+            <tr>
               <td scope="row">{{result.id}}</td>
               <td scope="row">{{result.comment}}</td>
               <td></td>
             </tr>
           </tbody>
         </table>
-      </div>
 
-      <form @submit.prevent="handleWorkForm">
+
+      <form @submit.prevent="handleCommentForm">
         <div class="form-group">
           <label for="comment">Enter Comment:</label>
-          <input type="text" class="form-control" id="comment" aria-describedby="entercomment" placeholder="Enter comment">
+          <input type="text" class="form-control" id="comment" aria-describedby="entercomment" placeholder="Enter comment" v-model="commentForm.comment">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button id="SubmitNewComment" type="submit" class="btn btn-primary">Submit</button>
       </form>
-
+    </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
       <script src="js/commentApp.js"></script>

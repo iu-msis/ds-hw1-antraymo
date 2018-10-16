@@ -6,7 +6,7 @@ var commentApp = new Vue({
   },
 
   methods: {
-    handleWorkForm(e) {
+    handleCommentForm(e) {
       // TODO: Check validity
       // if (this.workSpan <= 0) {
       //   console.error ("Invalid work period.");
@@ -15,7 +15,7 @@ var commentApp = new Vue({
       // this.workForm.start_date = this.workForm.start + ' ' + this.workForm.start_time;
       // this.workForm.hours = this.workSpan;
       // this.workForm.task_id = this.taskId;
-      const s = JSON.stringify(this.workForm);
+      const s = JSON.stringify(this.commentForm);
       console.log(s);
 
       // POST to remote server
@@ -27,17 +27,17 @@ var commentApp = new Vue({
         body: s // body data type must match "Content-Type" header
       })
       .then( response => response.json() )
-      .then( json => {this.work.push(json)})
+      .then( json => {this.comment.push(json)})
       .catch( err => {
-        console.error('WORK POST ERROR:');
+        console.error('COMMENT POST ERROR:');
         console.error(err);
       })
 
       // Reset workForm
-      this.workForm = this.getEmptyWorkForm();
+      this.commentForm = this.getEmptyCommentForm();
     },
 
-    getEmptyWorkForm() {
+    getEmptyCommentForm() {
       return {
         comment: ''
       }
@@ -45,11 +45,15 @@ var commentApp = new Vue({
 
   created () {
 
+    this.commentForm = this.getEmptyCommentForm();
+
+    const url = new URL(window.location.href);
+
     fetch('api/comment.php')
     .then( response => response.json() )
     .then( json => {commentApp.comment = json} )
     .catch( err => {
-      console.log('WORK FETCH ERROR:');
+      console.log('COMMENT FETCH ERROR:');
       console.log(err);
     })
 
