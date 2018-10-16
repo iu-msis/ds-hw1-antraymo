@@ -27,14 +27,14 @@
       <h3 class="page_title">Comment Page</h3>
 
       <div id ="comment" class="container">
-        <table class="table table-striped">
+        <table id="commentTable" class="table table-striped">
           <thead>
             <tr>
               <th scope="col">ID</th>
               <th scope="col">Comment</th>
             </tr>
           </thead>
-          <tbody id="CommentTableBody" v-for="result in comment"
+          <tbody id="commentTableBody" v-for="result in comment"
             :id="result.id"
             :comment="result.comment">
             <tr>
@@ -46,12 +46,12 @@
         </table>
 
 
-      <form @submit.prevent="handleCommentForm">
+      <form @submit.prevent="handleCommentForm" id="newCommentForm">
         <div class="form-group">
           <label for="comment">Enter Comment:</label>
           <input type="text" class="form-control" id="comment" aria-describedby="entercomment" placeholder="Enter comment" v-model="commentForm.comment">
         </div>
-        <button id="SubmitNewComment" type="submit" class="btn btn-primary">Submit</button>
+        <button id="submitNewComment" type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
