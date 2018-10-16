@@ -1,13 +1,12 @@
 var commentApp = new Vue({
   el: '#comment',
   data: {
-    comments: [ ],
-    commentForm: { }   // populated by this.getEmptyWorkForm()
+    comment: [],
+    commentForm: {}   // populated by this.getEmptyWorkForm()
   },
 
   methods: {
     handleCommentForm(e) {
-      // TODO: Check validity
       // if (this.workSpan <= 0) {
       //   console.error ("Invalid work period.");
       // }
@@ -39,8 +38,8 @@ var commentApp = new Vue({
 
     getEmptyCommentForm() {
       return {
-        comment: ''
-      }
+        comment: null
+      };
     },
 
   created () {
